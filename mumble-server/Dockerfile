@@ -7,6 +7,6 @@ RUN apt-get upgrade -y
 # Install mumble-server
 RUN apt-get install -y mumble-server
 
-EXPOSE 64738 
+EXPOSE 64738 64738/udp
 
 ENTRYPOINT ["/usr/sbin/murmurd", "-fg", "-ini", "/etc/mumble-server.ini"]
